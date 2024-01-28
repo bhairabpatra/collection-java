@@ -1,6 +1,7 @@
 package com.collection.collectionsorting;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class SortExampleDemo {
 
@@ -57,6 +58,18 @@ public class SortExampleDemo {
         for (Employee employee: employees){
             System.out.println(employee);
         }
+        Predicate<Integer> predicate = (number) -> number > 20;
+        System.out.println(predicate.test(10));
+
+        String[] std = {"kajal","priyanka","prabhu", "kat"};
+        Predicate<String> names = (name) -> name.startsWith("a", 2);
+        for (String s: std){
+            if(names.test(s)) {
+                System.out.println(s);
+            }
+        }
+
+
     }
 
 
